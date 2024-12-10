@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.adapter.HelloController">
+    <children>
+        <TextField fx:id="inputField" layoutX="14.0" layoutY="14.0" />
+        <Button fx:id="insertButton" layoutX="14.0" layoutY="50.0" text="Вставить" onAction="#handleInsert" />
+        <Button fx:id="deleteButton" layoutX="100.0" layoutY="50.0" text="Удалить" onAction="#handleDelete" />
+        <Button fx:id="findButton" layoutX="200.0" layoutY="50.0" text="Поиск" onAction="#handleFind" />
+        <ListView fx:id="demolist" layoutX="14.0" layoutY="100.0" prefHeight="200.0" prefWidth="300.0" />
+
+        <!-- Добавляем Rectangle для отображения результата поиска -->
+        <Rectangle fx:id="resultIndicator" layoutX="300.0" layoutY="50.0" width="20.0" height="20.0" fill="transparent" />
+    </children>
+</AnchorPane>
+
