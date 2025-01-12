@@ -1,0 +1,53 @@
+@startuml
+class Adapter {
+    +Stack<Integer> stack
+
+    +Adapter()
+
+    +void insert(Integer value)
+    +void delete()
+
+    +boolean find(Integer value)
+
+    +ArrayList<String> display()
+}
+
+class HelloController {
+
+    -TextField inputField
+
+
+    -ListView<String> demolist
+
+
+   -Button insertButton
+
+
+    -Button deleteButton
+
+    -Button findButton
+
+
+    -Rectangle resultIndicator;
+
+    -Adapter demo
+
+    +HelloController()
+
+
+    +void initialize()
+
+
+    -void handleInsert()
+
+
+    -void handleDelete()
+
+    -void handleFind()
+
+    -void updateListView()
+}
+
+HelloController --> Adapter
+@enduml
+
