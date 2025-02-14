@@ -1,4 +1,5 @@
 package model;
+
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -25,6 +26,7 @@ public class Adapter {
 
     public ArrayList<String> display() {
         ArrayList<String> result = new ArrayList<>();
+
         for (Integer value : stack) {
             result.add(value.toString());
         }

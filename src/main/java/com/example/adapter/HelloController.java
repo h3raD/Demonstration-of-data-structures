@@ -1,11 +1,11 @@
 package com.example.adapter;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Rectangle;
 import model.Adapter;
-import java.util.ArrayList;
 
 public class HelloController {
     @FXML
@@ -24,7 +24,7 @@ public class HelloController {
     private Button findButton;
 
     @FXML
-    private Rectangle resultIndicator; // Добавляем переменную для Rectangle
+    private Rectangle resultIndicator;
 
     private Adapter demo;
 
@@ -33,9 +33,7 @@ public class HelloController {
     }
 
     @FXML
-    public void initialize() {
-        // Инициализация, если необходимо
-    }
+    public void initialize() {}
 
     @FXML
     private void handleInsert() {
@@ -59,9 +57,9 @@ public class HelloController {
         if (!input.isEmpty()) {
             boolean found = demo.find(Integer.parseInt(input));
             if (found) {
-                resultIndicator.setFill(javafx.scene.paint.Color.GREEN); // Устанавливаем зеленый цвет
+                resultIndicator.setFill(javafx.scene.paint.Color.GREEN);
             } else {
-                resultIndicator.setFill(javafx.scene.paint.Color.RED); // Устанавливаем красный цвет
+                resultIndicator.setFill(javafx.scene.paint.Color.RED);
             }
         }
     }
@@ -69,7 +67,7 @@ public class HelloController {
     private void updateListView() {
         demolist.getItems().clear();
         demolist.getItems().addAll(demo.display());
-        resultIndicator.setFill(javafx.scene.paint.Color.TRANSPARENT); // Сбрасываем цвет при обновлении списка
+        resultIndicator.setFill(javafx.scene.paint.Color.TRANSPARENT);
     }
 }
 
